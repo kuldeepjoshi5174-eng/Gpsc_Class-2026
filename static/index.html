@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>શાંતાબેન અદાણી પ્રોફેશનલ કોર્સિસ - GPSC Portal</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icon-192.png">
+<meta name="theme-color" content="#3b1e08">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#26211d;--muted:#6f655c;--line:#e3ddd5;--bg:#f6f4f0;--brand:#3b1e08;--accent:#8a5a2b;--ok:#2e7d32;--bad:#c62828}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;font-family:'Baloo Bhai 2','Baloo Bhai',sans-serif;background:var(--bg);color:var(--ink);font-size:15.5px;line-height:1.45}
+input,select,button,textarea,table{font-family:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:12px}
+.top{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 16px;flex-wrap:wrap}
+.logo{width:62px;height:62px;flex:none;object-fit:contain}
+.top .t{flex:1;min-width:200px}
+.top h1{font-size:20px;margin:0;color:var(--brand);line-height:1.2;font-weight:700}
+.top p{margin:0;font-size:13.5px;color:var(--muted)}
+#authBox{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted)}
+nav{display:flex;gap:2px;flex-wrap:wrap;margin:10px 0 6px;border-bottom:1px solid var(--line)}
+nav button{background:none;border:none;border-bottom:3px solid transparent;padding:8px 13px;font-size:15.5px;font-weight:600;color:var(--muted);cursor:pointer}
+nav button.on{color:var(--brand);border-bottom-color:var(--brand)}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px;margin:12px 0}
+h2{font-size:19px;margin:0 0 6px;color:var(--brand);font-weight:700}
+h3{font-size:16.5px;margin:0 0 10px;color:var(--brand);font-weight:700}
+.muted{color:var(--muted)}.sm{font-size:12.5px}
+label{display:block;font-size:13.5px;font-weight:600;color:#5a4a3d;margin-bottom:3px}
+input,select,textarea{width:100%;padding:8px 10px;border:1px solid #cfc7bd;border-radius:7px;font-size:15px;background:#fff;color:var(--ink)}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid #cdbba3;border-color:var(--accent)}
+input:disabled,select:disabled{background:#f1eee9;color:#8a8178}
+.btn{background:var(--brand);color:#fff;border:1px solid var(--brand);border-radius:7px;padding:8px 18px;font-size:15px;font-weight:600;cursor:pointer;white-space:nowrap}
+.btn:hover{background:#2a1505}.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.ghost{background:#fff;color:var(--brand)}.btn.ghost:hover{background:#f3eee8}
+.btn.danger{color:var(--bad);border-color:#e0b4b4}
+.btn.sm{padding:3px 12px;font-size:13.5px}
+.row{display:flex;gap:8px;align-items:flex-end}.wrapr{flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:560px;background:#fff}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:6px 10px;border-bottom:1px solid #eee8e0;text-align:center;white-space:nowrap}
+th{background:#f3eee8;color:var(--brand);position:sticky;top:0;z-index:1;font-weight:700}
+td.l,th.l{text-align:left}
+tr.off td{color:#9a9087;background:#faf8f5}
+.b{display:inline-block;min-width:26px;padding:0 6px;border-radius:5px;font-weight:700;font-size:13.5px}
+.b.p{background:#e6f2e7;color:var(--ok)}.b.a{background:#fbe9e9;color:var(--bad)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:12px}
+.stat{border:1px solid var(--line);border-radius:8px;padding:8px 10px;text-align:center}
+.stat b{display:block;font-size:25px;color:var(--brand);line-height:1.2}.stat span{font-size:13px;color:var(--muted)}
+.note{font-size:13.5px;color:var(--accent);margin-top:8px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.chip{font-size:12.5px;border:1px solid var(--line);border-radius:20px;padding:1px 10px;color:var(--muted)}
+.chip.ok{border-color:#b9d9bc;color:var(--ok);background:#f2f9f2}
+label.rd{display:inline-block;position:relative;margin:0 2px;font-size:inherit;color:inherit}
+.rd input{position:absolute;opacity:0;width:0;height:0}
+.rd span{display:inline-block;min-width:40px;padding:2px 0;border:1.5px solid #cfc7bd;border-radius:6px;text-align:center;font-weight:700;cursor:pointer;color:#8a8178;background:#fff}
+.rd.p input:checked+span{background:var(--ok);border-color:var(--ok);color:#fff}
+.rd.a input:checked+span{background:var(--bad);border-color:var(--bad);color:#fff}
+.rd input:focus-visible+span{outline:2px solid #cdbba3;outline-offset:1px}
+.rd input:disabled+span{cursor:not-allowed;opacity:.6}
+.libcol{display:none}.show-lib .libcol{display:table-cell}
+.libcol input{padding:3px 6px;font-size:14px}
+.actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.bar{display:flex;gap:8px;align-items:center;margin-bottom:10px;flex-wrap:wrap}
+.bar .cnt{margin-left:auto;font-size:14px}
+.batchbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:8px 14px;margin:8px 0}
+.batchbar label{margin:0}.batchbar select{max-width:340px}
+.live{font-size:12px;color:var(--muted);text-align:right;margin-top:6px}
+#toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:#2a2420;color:#fff;padding:9px 16px;border-radius:8px;z-index:50;max-width:92%;font-size:14.5px}
+#toast.bad{background:#a42a2a}
+#choices button{margin:4px 4px 0 0}
+.checks{display:flex;flex-wrap:wrap;gap:6px 16px;padding:6px 0}
+.checks label{display:flex;gap:6px;align-items:center;font-weight:500;margin:0;font-size:14.5px}
+.checks input{width:auto}
+@media(max-width:600px){.top h1{font-size:16.5px}.logo{width:52px;height:52px}body{font-size:15px}.card{padding:12px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+<img class="logo" src="/logo.png" alt="K. N. Joshi" width="62" height="62">
+<div class="t"><h1>શાંતાબેન અદાણી પ્રોફેશનલ કોર્સિસ</h1><p>હાજરી, લાયબ્રેરી અને ટેસ્ટ પરિણામ</p></div>
+<button class="btn ghost sm" id="btnInstall" hidden>એપ ઇન્સ્ટોલ કરો</button>
+<div id="authBox"></div>
+</header>
+<nav id="nav" hidden></nav>
+<div id="batchBar" class="card batchbar" hidden><label for="batchSel">બેચ:</label><select id="batchSel"></select><span class="note" id="batchMsg" style="margin:0"></span></div>
+
+<!-- HOME: students / parents -->
+<section id="v-home" class="view">
+<div class="card" style="max-width:560px;margin:14px auto">
+<h2>વિદ્યાર્થીની વિગત જુઓ</h2>
+<div id="pBatchBox" style="margin-bottom:10px"><label for="pBatch">બેચ પસંદ કરો</label><select id="pBatch"></select></div>
+<p class="muted" style="margin:0 0 8px">Roll Number અથવા વિદ્યાર્થીનું નામ લખો</p>
+<div class="row"><input id="q" placeholder="દા.ત. 30 અથવા Abrar અથવા અબરાર" autocomplete="off"><button class="btn" id="btnSearch">શોધો</button></div>
+<div id="choices"></div>
+</div>
+<div id="result" hidden>
+<div class="card">
+<h2 id="pName">-</h2><div class="muted" id="pMeta">-</div>
+<div class="stats">
+<div class="stat"><b id="sPct">-</b><span>હાજરી</span></div>
+<div class="stat"><b id="sLec">-</b><span>લેક્ચર (હાજર / કુલ)</span></div>
+<div class="stat"><b id="sLib">-</b><span>લાયબ્રેરી દિવસ</span></div>
+<div class="stat"><b id="sTest">-</b><span>ટેસ્ટ સરેરાશ</span></div>
+</div>
+</div>
+<div class="card"><h3>દૈનિક હાજરી</h3>
+<div class="tw" style="max-height:340px"><table>
+<thead><tr><th>તારીખ</th><th>લેક્ચર ૧</th><th>લેક્ચર ૨</th><th>લાયબ્રેરી</th></tr></thead><tbody id="pAtt"></tbody></table></div></div>
+<div class="card"><h3>ટેસ્ટ પરિણામ</h3>
+<div class="tw" style="max-height:300px"><table>
+<thead><tr><th>તારીખ</th><th class="l">ટેસ્ટ</th><th>ગુણ</th><th>ટકાવારી</th></tr></thead><tbody id="pTests"></tbody></table></div>
+<div class="live" id="liveStamp"></div></div>
+</div>
+<p style="text-align:center;margin:18px 0"><button class="btn ghost sm" id="btnStaffLogin">સ્ટાફ લોગિન</button></p>
+</section>
+
+<!-- LOGIN -->
+<section id="v-login" class="view" hidden>
+<div class="card" style="max-width:380px;margin:20px auto">
+<h2>સ્ટાફ લોગિન</h2>
+<label for="lUser">Username</label><input id="lUser" autocomplete="username" autocapitalize="none">
+<label for="lPass" style="margin-top:10px">Password</label><input id="lPass" type="password" autocomplete="current-password">
+<div class="actions"><button class="btn" id="btnLogin">પ્રવેશ કરો</button><button class="btn ghost" id="btnLoginBack">પાછા</button></div>
+</div>
+</section>
+
+<!-- ATTENDANCE ENTRY -->
+<section id="v-att" class="view" hidden>
+<div class="card">
+<h2 id="attTitle">હાજરી એન્ટ્રી</h2>
+<div class="grid">
+<div><label for="aDate">તારીખ</label><input type="date" id="aDate"></div>
+<div><label for="aSlot">સત્ર</label><select id="aSlot"></select></div>
+<div><label for="aSubject">વિષય</label><input id="aSubject" maxlength="80"></div>
+<div><label for="aTopic">ટોપિક</label><input id="aTopic" maxlength="120"></div>
+<div id="aFacBox" hidden><label for="aFac">સ્ટાફ (એડમિન માટે)</label><select id="aFac"></select></div>
+</div>
+<div class="chips" id="dayChips"></div>
+<div class="note" id="aMsg"></div>
+</div>
+<div class="card">
+<div class="bar"><button class="btn ghost sm" id="allP">બધા P</button><button class="btn ghost sm" id="allA">બધા A</button><span class="cnt" id="aCount"></span></div>
+<div class="tw"><table id="aTable">
+<thead><tr><th>Roll</th><th class="l">વિદ્યાર્થી</th><th class="l">કોલેજ</th><th>P / A</th><th class="libcol">In</th><th class="libcol">Out</th><th class="libcol">પુસ્તક</th></tr></thead>
+<tbody id="aBody"></tbody></table></div>
+<div class="actions"><button class="btn" id="btnSaveAtt">સેવ કરો</button><button class="btn ghost danger" id="btnDelAtt" hidden>આ એન્ટ્રી કાઢી નાખો</button></div>
+</div>
+<div class="card"><h3>તાજેતરની એન્ટ્રીઓ</h3>
+<div class="tw" style="max-height:300px"><table>
+<thead><tr><th>તારીખ</th><th>સત્ર</th><th class="l">સ્ટાફ</th><th>P / કુલ</th><th class="l">ટોપિક</th><th></th></tr></thead><tbody id="recentBody"></tbody></table></div></div>
+</section>
+
+<!-- TEST ENTRY -->
+<section id="v-test" class="view" hidden>
+<div class="card">
+<h2>ટેસ્ટ માર્ક્સ એન્ટ્રી</h2>
+<div class="grid">
+<div><label for="tSel">ટેસ્ટ</label><select id="tSel"></select></div>
+<div><label for="tDate">તારીખ</label><input type="date" id="tDate"></div>
+<div><label for="tTitle">ટેસ્ટ વિષય / નામ</label><input id="tTitle" maxlength="120" placeholder="દા.ત. GPSC મોક ટેસ્ટ ૧"></div>
+<div><label for="tMax">કુલ ગુણ</label><input type="number" id="tMax" min="1" value="50"></div>
+<div id="tFacBox" hidden><label for="tFac">ફેકલ્ટી (એડમિન માટે)</label><select id="tFac"></select></div>
+</div>
+<div class="note" id="tMsg"></div>
+</div>
+<div class="card">
+<div class="tw"><table><thead><tr><th>Roll</th><th class="l">વિદ્યાર્થી</th><th class="l">કોલેજ</th><th>મેળવેલ ગુણ</th></tr></thead><tbody id="tBody"></tbody></table></div>
+<div class="actions"><button class="btn" id="btnSaveTest">સેવ કરો</button><button class="btn ghost danger" id="btnDelTest" hidden>આ ટેસ્ટ કાઢી નાખો</button></div>
+</div>
+</section>
+
+<!-- REPORTS -->
+<section id="v-report" class="view" hidden>
+<div class="card row wrapr">
+<div style="min-width:150px"><label for="repType">રિપોર્ટ</label><select id="repType"><option value="att">હાજરી રિપોર્ટ</option><option value="tests">ટેસ્ટ રિપોર્ટ</option></select></div>
+<div style="min-width:160px"><label for="repMonth">મહિનો</label><input type="month" id="repMonth"></div>
+<button class="btn" id="btnRep">બતાવો</button>
+<button class="btn ghost" id="btnRepAll">બધા મહિના</button>
+<button class="btn ghost" id="btnRepX">Excel ડાઉનલોડ</button>
+</div>
+<div class="tw"><table><thead id="repHead"></thead><tbody id="repBody"></tbody></table></div>
+<p class="muted sm" id="repNote"></p>
+</section>
+
+<!-- STUDENTS (admin) -->
+<section id="v-students" class="view" hidden>
+<div class="card"><div class="row wrapr" style="justify-content:space-between"><h2 style="margin:0">વિદ્યાર્થીઓ <span class="muted sm" id="stCount"></span></h2>
+<div style="min-width:220px"><input id="stFilter" placeholder="શોધો: નામ / Roll / કોલેજ"></div></div>
+<div class="tw" style="max-height:380px;margin-top:10px"><table>
+<thead><tr><th>Roll</th><th class="l">નામ</th><th class="l">કોલેજ</th><th class="l">મોબાઇલ</th><th class="l">વાલી</th><th>સ્થિતિ</th><th></th></tr></thead><tbody id="stBody"></tbody></table></div></div>
+<div class="card"><h3 id="stTitle">નવો વિદ્યાર્થી ઉમેરો</h3>
+<div class="grid">
+<div><label for="stRoll">Roll (ખાલી = આપોઆપ)</label><input type="number" id="stRoll" min="1"></div>
+<div><label for="stName">નામ *</label><input id="stName" maxlength="100"></div>
+<div><label for="stCollege">કોલેજ</label><input id="stCollege" maxlength="100"></div>
+<div><label for="stMobile">વિદ્યાર્થીનો મોબાઇલ</label><input id="stMobile" inputmode="tel" maxlength="20"></div>
+<div><label for="stParent">વાલીનું નામ</label><input id="stParent" maxlength="100"></div>
+<div><label for="stParentMobile">વાલીનો મોબાઇલ</label><input id="stParentMobile" inputmode="tel" maxlength="20"></div>
+<div id="stActiveBox" hidden><label for="stActive">સ્થિતિ</label><select id="stActive"><option value="1">ચાલુ</option><option value="0">બંધ (હાજરી યાદીમાંથી હટાવો)</option></select></div>
+</div>
+<div class="actions"><button class="btn" id="btnSaveStudent">સેવ કરો</button><button class="btn ghost" id="btnResetStudent">નવો / રદ</button></div>
+<p class="muted sm">વિદ્યાર્થી "બંધ" કરવાથી જૂનો રેકોર્ડ સચવાય છે, પણ નવી હાજરી/ટેસ્ટ યાદીમાં દેખાતો નથી.</p></div>
+<div class="card"><h3>એકસાથે ઘણા વિદ્યાર્થી ઉમેરો</h3>
+<p class="muted sm" style="margin-top:0">દરેક લાઇનમાં એક વિદ્યાર્થી: <b>Roll, નામ, કોલેજ, મોબાઇલ</b> (કોમા કે Excel માંથી copy-paste ટેબ ચાલશે). Roll ન લખો તો આપોઆપ મળશે: <i>નામ, કોલેજ</i></p>
+<textarea id="bulkTxt" placeholder="1, Ravi Patel, MA Parikh College, 9825012345&#10;2, Jigar Shah, GD Modi College"></textarea>
+<div class="actions"><button class="btn" id="btnBulk">બધા ઉમેરો</button></div></div>
+</section>
+
+<!-- BATCHES (admin) -->
+<section id="v-batches" class="view" hidden>
+<div class="card"><h2>બેચ મેનેજમેન્ટ</h2>
+<div class="tw" style="max-height:340px"><table>
+<thead><tr><th class="l">બેચનું નામ</th><th class="l">વર્ણન</th><th>વિદ્યાર્થી</th><th>સ્થિતિ</th><th></th></tr></thead><tbody id="bBody"></tbody></table></div></div>
+<div class="card"><h3 id="bTitle">નવો બેચ બનાવો</h3>
+<div class="grid">
+<div><label for="bName">બેચનું નામ *</label><input id="bName" maxlength="80" placeholder="દા.ત. GPSC 1&2 2026 / TALATI"></div>
+<div><label for="bDesc">વર્ણન</label><input id="bDesc" maxlength="200"></div>
+<div id="bActiveBox" hidden><label for="bActive">સ્થિતિ</label><select id="bActive"><option value="1">ચાલુ</option><option value="0">બંધ (પબ્લિક/સ્ટાફમાંથી છુપાવો)</option></select></div>
+</div>
+<div class="actions"><button class="btn" id="btnSaveBatch">સેવ કરો</button><button class="btn ghost" id="btnResetBatch">નવો / રદ</button></div>
+<p class="muted sm">બેચ બનાવ્યા પછી "વિદ્યાર્થીઓ" ટેબમાં તેમાં વિદ્યાર્થી ઉમેરો અને "સ્ટાફ" ટેબમાં ફેકલ્ટી/લાયબ્રેરીને બેચ સોંપો.</p></div>
+</section>
+
+<!-- STAFF (admin) -->
+<section id="v-staff" class="view" hidden>
+<div class="card"><h2>સ્ટાફ મેનેજમેન્ટ</h2>
+<div class="tw" style="max-height:340px"><table>
+<thead><tr><th class="l">Username</th><th class="l">નામ</th><th>ભૂમિકા</th><th class="l">વિષય</th><th class="l">બેચ</th><th>સ્થિતિ</th><th></th></tr></thead><tbody id="sBody"></tbody></table></div></div>
+<div class="card"><h3 id="sTitle">નવો સ્ટાફ ઉમેરો</h3>
+<div class="grid">
+<div><label for="sUser">Username</label><input id="sUser" autocapitalize="none" maxlength="30"></div>
+<div><label for="sName">નામ</label><input id="sName" maxlength="80"></div>
+<div><label for="sRole">ભૂમિકા</label><select id="sRole"><option value="faculty">ફેકલ્ટી (લેક્ચર હાજરી + ટેસ્ટ)</option><option value="library">લાયબ્રેરી (ફક્ત લાયબ્રેરી હાજરી)</option><option value="admin" hidden>એડમિન</option></select></div>
+<div><label for="sSubject">વિષય</label><input id="sSubject" maxlength="80"></div>
+<div><label for="sPass" id="sPassLbl">Password</label><input id="sPass" type="password" autocomplete="new-password" placeholder="ઓછામાં ઓછા 6 અક્ષર"></div>
+<div id="sActiveBox" hidden><label for="sActive">સ્થિતિ</label><select id="sActive"><option value="1">ચાલુ</option><option value="0">બંધ</option></select></div>
+</div>
+<div id="sBatchBox"><label style="margin-top:10px">કયા બેચમાં કામ કરશે</label><div class="checks" id="sBatches"></div></div>
+<div class="actions"><button class="btn" id="btnSaveStaff">સેવ કરો</button><button class="btn ghost" id="btnResetStaff">નવું / રદ</button></div>
+<p class="muted sm">ફેકલ્ટી લેક્ચર હાજરી અને ટેસ્ટ માર્ક્સ ઉમેરી શકે છે. લાયબ્રેરી લોગિન ફક્ત લાયબ્રેરી હાજરી ઉમેરી શકે છે. સેવ થયેલી એન્ટ્રીમાં ફેરફાર/ડિલીટ ફક્ત એડમિન કરી શકે છે.</p>
+</div>
+</section>
+
+<!-- ACCOUNT -->
+<section id="v-account" class="view" hidden>
+<div class="card" style="max-width:420px"><h2>મારું ખાતું</h2>
+<p class="muted" id="accInfo"></p>
+<label for="pwOld">જૂનો password</label><input id="pwOld" type="password" autocomplete="current-password">
+<label for="pwNew" style="margin-top:10px">નવો password (ઓછામાં ઓછા 6 અક્ષર)</label><input id="pwNew" type="password" autocomplete="new-password">
+<div class="actions"><button class="btn" id="btnPw">Password બદલો</button></div></div>
+</section>
+
+</div>
+<div id="toast" hidden></div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const ROLE = {admin:'એડમિન', faculty:'ફેકલ્ટી', library:'લાયબ્રેરી'};
+const SLOT = {L1:'લેક્ચર ૧ (08:30–10:00)', L2:'લેક્ચર ૨ (10:10–12:00)', LIB:'લાયબ્રેરી (12:00 પછી)'};
+const SHORT = {L1:'લેક્ચર ૧', L2:'લેક્ચર ૨', LIB:'લાયબ્રેરી'};
+const BATCH_VIEWS = ['att', 'test', 'report', 'students'];
+let token = sessionStorage.getItem('tok') || '', user = null, view = 'home', usersCache = [];
+let batches = [], curBatch = null, roster = [];
+let pubBatches = [], curRoll = null, curPBatch = null;
+try { user = JSON.parse(sessionStorage.getItem('usr') || 'null'); } catch (e) {}
+if (!token) user = null;
+const todayStr = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; };
+
+let toastT;
+function toast(msg, bad) { const t = $('toast'); t.textContent = msg; t.className = bad ? 'bad' : ''; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => t.hidden = true, 4500); }
+
+async function api(path, opts = {}) {
+  const headers = {'Content-Type': 'application/json'};
+  if (token) headers['Authorization'] = 'Bearer ' + token;
+  const res = await fetch(path, {cache: 'no-store', ...opts, headers});
+  let data = null; try { data = await res.json(); } catch (e) {}
+  if (res.status === 401 && token) logout(true);
+  if (!res.ok) {
+    let m = data && data.detail;
+    if (Array.isArray(m)) m = m.map(x => String(x.msg).replace(/^Value error, /, '')).join(', ');
+    throw new Error(m || 'સર્વર એરર (' + res.status + ')');
+  }
+  return data;
+}
+
+// ---------- chrome / navigation ----------
+function tabs() {
+  const t = [['home', 'હોમ']];
+  if (!user) return t;
+  if (user.role === 'library') t.push(['att', 'લાયબ્રેરી એન્ટ્રી']);
+  else t.push(['att', 'હાજરી એન્ટ્રી'], ['test', 'ટેસ્ટ માર્ક્સ'], ['report', 'રિપોર્ટ']);
+  if (user.role === 'admin') t.push(['students', 'વિદ્યાર્થીઓ'], ['batches', 'બેચ'], ['staff', 'સ્ટાફ']);
+  t.push(['account', 'ખાતું']);
+  return t;
+}
+function renderChrome() {
+  $('authBox').innerHTML = user ? `<span>${esc(user.name)} · ${ROLE[user.role]}</span><button class="btn ghost sm" id="btnOut">લોગઆઉટ</button>` : '';
+  if (user) $('btnOut').onclick = () => logout(false);
+  $('btnStaffLogin').hidden = !!user;
+  $('nav').hidden = !user;
+  $('nav').innerHTML = tabs().map(([k, l]) => `<button data-v="${k}" class="${k === view ? 'on' : ''}">${l}</button>`).join('');
+  $('nav').querySelectorAll('button').forEach(b => b.onclick = () => go(b.dataset.v));
+}
+async function loadBatches() {
+  batches = await api('/api/batches');
+  const saved = +sessionStorage.getItem('batch');
+  curBatch = batches.find(b => b.id === saved) ? saved : (batches.find(b => b.active) || batches[0] || {}).id || null;
+  $('batchSel').innerHTML = batches.map(b => `<option value="${b.id}">${esc(b.name)}${b.active ? '' : ' (બંધ)'}</option>`).join('');
+  if (curBatch) $('batchSel').value = curBatch;
+}
+async function go(v) {
+  view = v;
+  document.querySelectorAll('.view').forEach(s => s.hidden = s.id !== 'v-' + v);
+  renderChrome(); window.scrollTo(0, 0);
+  const needsBatch = !!user && BATCH_VIEWS.includes(v);
+  $('batchBar').hidden = !needsBatch; $('batchMsg').textContent = '';
+  const init = {att: initAtt, test: initTest, report: initReport, students: initStudents, batches: initBatches, staff: initStaff, account: initAccount}[v];
+  if (!init || !user) return;
+  try {
+    if (v !== 'account') await loadBatches();
+    if (needsBatch && !curBatch) { $('batchMsg').textContent = 'આ ખાતાને કોઈ બેચ સોંપાયો નથી. એડમિનનો સંપર્ક કરો.'; return; }
+    await init();
+  } catch (e) { toast(e.message, true); }
+}
+$('batchSel').onchange = () => { curBatch = +$('batchSel').value; sessionStorage.setItem('batch', curBatch); go(view); };
+function logout(expired) {
+  token = ''; user = null; sessionStorage.removeItem('tok'); sessionStorage.removeItem('usr');
+  go('home'); if (expired) toast('સેશન પૂરું થયું, ફરી લોગિન કરો', true);
+}
+async function doLogin() {
+  try {
+    const d = await api('/api/login', {method: 'POST', body: JSON.stringify({username: $('lUser').value.trim(), password: $('lPass').value})});
+    token = d.token; user = d.user; sessionStorage.setItem('tok', token); sessionStorage.setItem('usr', JSON.stringify(user));
+    $('lPass').value = ''; go(user.role === 'admin' ? 'batches' : 'att');
+  } catch (e) { toast(e.message, true); }
+}
+$('btnLogin').onclick = doLogin;
+$('lPass').addEventListener('keydown', e => { if (e.key === 'Enter') doLogin(); });
+$('btnStaffLogin').onclick = () => go('login');
+$('btnLoginBack').onclick = () => go('home');
+
+// ---------- HOME: student lookup ----------
+async function loadPublicBatches() {
+  try { pubBatches = await api('/api/public/batches'); } catch (e) { pubBatches = []; }
+  $('pBatch').innerHTML = pubBatches.map(b => `<option value="${b.id}">${esc(b.name)}</option>`).join('');
+  const saved = +localStorage.getItem('pb');
+  if (pubBatches.find(b => b.id === saved)) $('pBatch').value = saved;
+  $('pBatchBox').hidden = pubBatches.length < 2;
+}
+$('pBatch').onchange = () => { localStorage.setItem('pb', $('pBatch').value); $('result').hidden = true; curRoll = null; $('choices').innerHTML = ''; };
+async function search(q, batchId) {
+  q = (q ?? $('q').value).trim(); batchId = batchId || +$('pBatch').value;
+  if (!batchId) return toast('કોઈ બેચ ઉપલબ્ધ નથી', true);
+  if (!q) return toast('Roll Number અથવા નામ લખો', true);
+  $('choices').innerHTML = '';
+  try {
+    const d = await api(`/api/student?batch_id=${batchId}&q=` + encodeURIComponent(q));
+    if (d.matches) {
+      $('result').hidden = true; curRoll = null;
+      $('choices').innerHTML = '<p class="muted" style="margin:10px 0 0">એક કરતાં વધુ મળ્યા, પસંદ કરો:</p>' +
+        d.matches.map(m => `<button class="btn ghost sm" data-r="${m.roll}">${m.roll}. ${esc(m.name)}</button>`).join('');
+      $('choices').querySelectorAll('button').forEach(b => b.onclick = () => { $('q').value = b.dataset.r; search(b.dataset.r, batchId); });
+    } else { curRoll = d.student.roll; curPBatch = batchId; renderStudent(d); }
+  } catch (e) { toast(e.message, true); $('result').hidden = true; curRoll = null; }
+}
+const lecCell = e => !e ? '<span class="muted">—</span>' :
+  `<span class="b ${e.status === 'Present' ? 'p' : 'a'}">${e.status === 'Present' ? 'P' : 'A'}</span><div class="sm muted">${esc([e.faculty, e.subject, e.topic].filter(Boolean).join(' · '))}</div>`;
+const libCell = e => !e ? '<span class="muted">—</span>' : e.status !== 'Present' ? '<span class="b a">A</span>' :
+  `<span class="b p">P</span><div class="sm muted">${esc([(e.lib_in && e.lib_out) ? e.lib_in + '–' + e.lib_out : '', e.book].filter(Boolean).join(' · '))}</div>`;
+function renderStudent(d) {
+  const s = d.summary;
+  $('result').hidden = false;
+  $('pName').textContent = d.student.name;
+  $('pMeta').textContent = ['Roll No: ' + d.student.roll, d.student.college, d.student.batch].filter(Boolean).join(' · ');
+  $('sPct').textContent = s.lectures_held ? s.percent + '%' : '-';
+  $('sLec').textContent = `${s.lectures_attended} / ${s.lectures_held}`;
+  $('sLib').textContent = s.library_days;
+  $('sTest').textContent = s.test_percent === null ? '-' : s.test_percent + '%';
+  $('pAtt').innerHTML = d.attendance.length ? d.attendance.map(r => `<tr><td><b>${esc(r.date)}</b></td><td>${lecCell(r.L1)}</td><td>${lecCell(r.L2)}</td><td>${libCell(r.LIB)}</td></tr>`).join('')
+    : '<tr><td colspan="4" class="muted">હજુ કોઈ હાજરી રેકોર્ડ નથી.</td></tr>';
+  $('pTests').innerHTML = d.tests.length ? d.tests.map(t => `<tr><td>${esc(t.date)}</td><td class="l"><b>${esc(t.title)}</b></td>
+    <td>${t.score === null ? '<span class="b a">AB</span>' : t.score + ' / ' + t.max_marks}</td><td>${t.percent === null ? '-' : t.percent + '%'}</td></tr>`).join('')
+    : '<tr><td colspan="4" class="muted">હજુ કોઈ ટેસ્ટ રેકોર્ડ નથી.</td></tr>';
+  $('liveStamp').textContent = 'લાઈવ · છેલ્લું અપડેટ ' + new Date().toLocaleTimeString('gu-IN');
+}
+$('btnSearch').onclick = () => search();
+$('q').addEventListener('keydown', e => { if (e.key === 'Enter') search(); });
+setInterval(async () => {
+  if (document.hidden || !curRoll || view !== 'home') return;
+  try { renderStudent(await api(`/api/student?batch_id=${curPBatch}&q=${curRoll}`)); } catch (e) {}
+}, 20000);
+
+// ---------- ATTENDANCE ENTRY ----------
+let aState = {exists: false, canEdit: true};
+const allowedSlots = () => user.role === 'admin' ? ['L1', 'L2', 'LIB'] : user.role === 'library' ? ['LIB'] : ['L1', 'L2'];
+async function loadUsers() { if (user.role === 'admin') usersCache = await api('/api/users'); }
+function fillFacSelect(prefix, roles, selected) {
+  $(prefix).innerHTML = '<option value="">(મારા નામે)</option>' + usersCache.filter(u => u.active && roles.includes(u.role))
+    .map(u => `<option value="${u.id}">${esc(u.name)}${u.subject ? ' – ' + esc(u.subject) : ''}</option>`).join('');
+  $(prefix).value = selected || '';
+}
+async function initAtt() {
+  $('attTitle').textContent = user.role === 'library' ? 'લાયબ્રેરી એન્ટ્રી' : 'હાજરી એન્ટ્રી';
+  const prev = $('aSlot').value;
+  $('aSlot').innerHTML = allowedSlots().map(s => `<option value="${s}">${SLOT[s]}</option>`).join('');
+  if (allowedSlots().includes(prev)) $('aSlot').value = prev;
+  if (!$('aDate').value) $('aDate').value = todayStr();
+  $('aFacBox').hidden = user.role !== 'admin';
+  roster = await api(`/api/batches/${curBatch}/students`);
+  await loadUsers();
+  await loadSession();
+}
+function buildAttTable(list, slot) {
+  $('aTable').classList.toggle('show-lib', slot === 'LIB');
+  $('aBody').innerHTML = list.map(s => `<tr data-sid="${s.student_id}"><td><b>${s.roll}</b></td><td class="l">${esc(s.name)}</td><td class="l sm">${esc(s.college)}</td>
+    <td><label class="rd p"><input type="radio" name="s${s.student_id}" value="Present" checked><span>P</span></label><label class="rd a"><input type="radio" name="s${s.student_id}" value="Absent"><span>A</span></label></td>
+    <td class="libcol"><input type="time" class="li" value="12:15"></td><td class="libcol"><input type="time" class="lo" value="13:30"></td>
+    <td class="libcol"><input class="bk" maxlength="120" placeholder="પુસ્તક"></td></tr>`).join('')
+    || '<tr><td colspan="7" class="muted">આ બેચમાં હજુ કોઈ વિદ્યાર્થી નથી. એડમિન "વિદ્યાર્થીઓ" ટેબમાં ઉમેરશે.</td></tr>';
+  countAtt();
+}
+function rowAbsentToggle(tr) {
+  const r = tr.querySelector('input[type=radio]:checked'); if (!r) return;
+  tr.querySelectorAll('.libcol input').forEach(i => i.disabled = r.value === 'Absent' || !aState.canEdit);
+}
+function countAtt() {
+  const all = $('aBody').querySelectorAll('tr[data-sid]').length, p = $('aBody').querySelectorAll('input[value=Present]:checked').length;
+  $('aCount').textContent = `P: ${p} · A: ${all - p} · કુલ: ${all}`;
+}
+$('aBody').addEventListener('change', e => { if (e.target.type === 'radio') { rowAbsentToggle(e.target.closest('tr')); countAtt(); } });
+function setAll(v) { $('aBody').querySelectorAll('tr[data-sid]').forEach(tr => { tr.querySelector(`input[value=${v}]`).checked = true; rowAbsentToggle(tr); }); countAtt(); }
+$('allP').onclick = () => setAll('Present'); $('allA').onclick = () => setAll('Absent');
+function setAttEditable(ok) {
+  document.querySelectorAll('#aBody input, #aSubject, #aTopic, #aFac, #allP, #allA, #btnSaveAtt').forEach(el => el.disabled = !ok);
+  $('aBody').querySelectorAll('tr[data-sid]').forEach(rowAbsentToggle);
+}
+async function loadSession() {
+  const date = $('aDate').value, slot = $('aSlot').value; if (!date || !slot || !curBatch) return;
+  const q = `batch_id=${curBatch}&date=${date}`;
+  const [d, day] = await Promise.all([api(`/api/attendance/session?${q}&slot=${slot}`), api('/api/attendance/day?' + q)]);
+  const list = d.exists ? d.rows : roster.filter(s => s.active !== false).map(s => ({student_id: s.id, roll: s.roll, name: s.name, college: s.college}));
+  buildAttTable(list, slot);
+  fillFacSelect('aFac', slot === 'LIB' ? ['library'] : ['faculty'], d.exists ? d.session.faculty_id : null);
+  $('dayChips').innerHTML = allowedSlots().map(s => { const x = day.find(q => q.slot === s);
+    return `<span class="chip ${x ? 'ok' : ''}">${SHORT[s]}: ${x ? 'સેવ · ' + esc(x.faculty || '') : 'બાકી'}</span>`; }).join('');
+  aState = {exists: d.exists, canEdit: d.can_edit};
+  if (d.exists) {
+    $('aSubject').value = d.session.subject || ''; $('aTopic').value = d.session.topic || '';
+    d.rows.forEach(r => { const tr = $('aBody').querySelector(`tr[data-sid="${r.student_id}"]`); if (!tr) return;
+      tr.querySelector(`input[value=${r.status}]`).checked = true;
+      tr.querySelector('.li').value = r.lib_in || ''; tr.querySelector('.lo').value = r.lib_out || ''; tr.querySelector('.bk').value = r.book || ''; });
+    countAtt();
+  } else { $('aSubject').value = user.subject || ''; $('aTopic').value = ''; }
+  setAttEditable(d.can_edit && list.length > 0);
+  $('btnDelAtt').hidden = !(user.role === 'admin' && d.exists);
+  $('aMsg').textContent = !d.allowed ? 'આ સત્ર માટે તમારી પરવાનગી નથી.'
+    : d.exists ? (user.role === 'admin' ? `સેવ થયેલ છે (${d.session.faculty || '-'}). એડમિન તરીકે ફેરફાર કરી શકો અથવા કાઢી શકો.` : `સેવ થયેલ છે (${d.session.faculty || '-'}). ફેરફાર ફક્ત એડમિન કરી શકશે.`)
+    : 'નવી એન્ટ્રી – બધા P પહેલેથી પસંદ છે, ગેરહાજર હોય તેમને A કરો.';
+  loadRecent();
+}
+async function loadRecent() {
+  try {
+    const rows = await api('/api/attendance/recent?batch_id=' + curBatch);
+    $('recentBody').innerHTML = rows.length ? rows.map(r => `<tr><td>${esc(r.date)}</td><td>${SHORT[r.slot]}</td><td class="l">${esc(r.faculty || '-')}</td>
+      <td>${r.present} / ${r.total}</td><td class="l">${esc([r.subject, r.topic].filter(Boolean).join(' · '))}</td>
+      <td><button class="btn ghost sm" data-open="${r.date}|${r.slot}">ખોલો</button>${user.role === 'admin' ? ` <button class="btn ghost sm danger" data-del="${r.date}|${r.slot}">કાઢો</button>` : ''}</td></tr>`).join('')
+      : '<tr><td colspan="6" class="muted">હજુ કોઈ એન્ટ્રી નથી.</td></tr>';
+    $('recentBody').querySelectorAll('[data-open]').forEach(b => b.onclick = () => { const [d, s] = b.dataset.open.split('|');
+      $('aDate').value = d; $('aSlot').value = s; loadSession().catch(e => toast(e.message, true)); window.scrollTo(0, 0); });
+    $('recentBody').querySelectorAll('[data-del]').forEach(b => b.onclick = async () => { const [d, s] = b.dataset.del.split('|');
+      if (!confirm(`${d} · ${SHORT[s]} ની એન્ટ્રી કાઢી નાખવી છે?`)) return;
+      try { await api(`/api/attendance/session?batch_id=${curBatch}&date=${d}&slot=${s}`, {method: 'DELETE'}); toast('એન્ટ્રી કાઢી નાખી'); await loadSession(); }
+      catch (e) { toast(e.message, true); } });
+  } catch (e) { $('recentBody').innerHTML = `<tr><td colspan="6" class="muted">${esc(e.message)}</td></tr>`; }
+}
+$('aDate').onchange = () => loadSession().catch(e => toast(e.message, true));
+$('aSlot').onchange = () => loadSession().catch(e => toast(e.message, true));
+function collectRows(slot) {
+  return [...$('aBody').querySelectorAll('tr[data-sid]')].map(tr => {
+    const st = tr.querySelector('input[type=radio]:checked').value, o = {student_id: +tr.dataset.sid, status: st};
+    if (slot === 'LIB' && st === 'Present') { o.lib_in = tr.querySelector('.li').value; o.lib_out = tr.querySelector('.lo').value; o.book = tr.querySelector('.bk').value.trim(); }
+    return o; });
+}
+$('btnSaveAtt').onclick = async () => {
+  const slot = $('aSlot').value, date = $('aDate').value; if (!date) return toast('તારીખ પસંદ કરો', true);
+  const body = {batch_id: curBatch, date, slot, subject: $('aSubject').value.trim(), topic: $('aTopic').value.trim(), rows: collectRows(slot)};
+  if (user.role === 'admin' && $('aFac').value) body.faculty_id = +$('aFac').value;
+  $('btnSaveAtt').disabled = true;
+  try { const r = await api('/api/attendance/session', {method: 'PUT', body: JSON.stringify(body)});
+    toast(`સેવ થયું · P: ${r.present}, A: ${r.total - r.present}`); await loadSession();
+  } catch (e) { toast(e.message, true); $('btnSaveAtt').disabled = !aState.canEdit; }
+};
+$('btnDelAtt').onclick = async () => {
+  if (!confirm('આ તારીખ/સત્રની આખી એન્ટ્રી કાઢી નાખવી છે?')) return;
+  try { await api(`/api/attendance/session?batch_id=${curBatch}&date=${$('aDate').value}&slot=${$('aSlot').value}`, {method: 'DELETE'}); toast('એન્ટ્રી કાઢી નાખી'); await loadSession(); }
+  catch (e) { toast(e.message, true); }
+};
+
+// ---------- TEST ENTRY ----------
+let tState = {id: null, canEdit: true};
+async function initTest() {
+  $('tFacBox').hidden = user.role !== 'admin';
+  roster = await api(`/api/batches/${curBatch}/students`);
+  await loadUsers(); fillFacSelect('tFac', ['faculty']);
+  await refreshTests(); newTest();
+}
+async function refreshTests(sel) {
+  const list = await api('/api/tests/list?batch_id=' + curBatch);
+  $('tSel').innerHTML = '<option value="">નવો ટેસ્ટ ઉમેરો</option>' + list.map(t => `<option value="${t.id}">${esc(t.date)} · ${esc(t.title)}${t.faculty ? ' (' + esc(t.faculty) + ')' : ''}</option>`).join('');
+  $('tSel').value = sel || '';
+}
+function buildMarks(list) {
+  $('tBody').innerHTML = list.map(s => `<tr data-sid="${s.student_id}"><td><b>${s.roll}</b></td><td class="l">${esc(s.name)}</td><td class="l sm">${esc(s.college)}</td>
+    <td><input type="number" class="mk" min="0" step="0.5" placeholder="AB" style="width:110px" value="${s.score != null ? s.score : ''}"></td></tr>`).join('')
+    || '<tr><td colspan="4" class="muted">આ બેચમાં હજુ કોઈ વિદ્યાર્થી નથી.</td></tr>';
+}
+function setTestEditable(ok) { document.querySelectorAll('#tDate,#tTitle,#tMax,#tFac,#tBody input,#btnSaveTest').forEach(el => el.disabled = !ok); }
+function newTest() {
+  tState = {id: null, canEdit: true}; $('tDate').value = todayStr(); $('tTitle').value = ''; $('tMax').value = 50; $('tFac').value = '';
+  buildMarks(roster.filter(s => s.active !== false).map(s => ({student_id: s.id, roll: s.roll, name: s.name, college: s.college})));
+  setTestEditable(true); $('btnDelTest').hidden = true;
+  $('tMsg').textContent = 'નવો ટેસ્ટ – ખાલી ગુણ = ગેરહાજર (AB).';
+}
+async function pickTest() {
+  const id = $('tSel').value; if (!id) return newTest();
+  const d = await api('/api/tests/' + id), t = d.test;
+  tState = {id: t.id, canEdit: d.can_edit};
+  $('tDate').value = t.date; $('tTitle').value = t.title; $('tMax').value = t.max_marks; buildMarks(d.marks);
+  $('tFac').value = t.created_by || ''; setTestEditable(d.can_edit); $('btnDelTest').hidden = !d.can_edit;
+  $('tMsg').textContent = d.can_edit ? `એડમિન તરીકે ફેરફાર કરી શકો (${t.faculty || '-'}).` : `સેવ થયેલ ટેસ્ટ (${t.faculty || '-'}). ફેરફાર ફક્ત એડમિન કરી શકશે.`;
+}
+$('tSel').onchange = () => pickTest().catch(e => toast(e.message, true));
+$('btnSaveTest').onclick = async () => {
+  const title = $('tTitle').value.trim(), max = parseFloat($('tMax').value);
+  if (!title) return toast('ટેસ્ટનું નામ લખો', true);
+  if (!(max > 0)) return toast('કુલ ગુણ સાચા લખો', true);
+  const marks = [...$('tBody').querySelectorAll('tr[data-sid]')].map(tr => { const v = tr.querySelector('.mk').value; return {student_id: +tr.dataset.sid, score: v === '' ? null : parseFloat(v)}; });
+  const bad = marks.find(m => m.score !== null && (m.score < 0 || m.score > max));
+  if (bad) return toast(`ગુણ 0 થી ${max} વચ્ચે હોવા જોઈએ`, true);
+  const body = {test_id: tState.id, batch_id: curBatch, date: $('tDate').value, title, max_marks: max, marks};
+  if (user.role === 'admin' && $('tFac').value) body.faculty_id = +$('tFac').value;
+  $('btnSaveTest').disabled = true;
+  try { const r = await api('/api/tests', {method: 'PUT', body: JSON.stringify(body)});
+    toast('ટેસ્ટ સેવ થયો'); await refreshTests(r.test_id); await pickTest();
+  } catch (e) { toast(e.message, true); $('btnSaveTest').disabled = false; }
+};
+$('btnDelTest').onclick = async () => {
+  if (!confirm('આ ટેસ્ટ અને તેના બધા ગુણ કાઢી નાખવા છે?')) return;
+  try { await api('/api/tests/' + tState.id, {method: 'DELETE'}); toast('ટેસ્ટ કાઢી નાખ્યો'); await refreshTests(); newTest(); }
+  catch (e) { toast(e.message, true); }
+};
+
+// ---------- REPORTS ----------
+async function initReport() { if (!$('repMonth').value) $('repMonth').value = todayStr().slice(0, 7); await renderRep(); }
+async function renderRep() {
+  if (!curBatch) return;
+  const type = $('repType').value, m = $('repMonth').value, head = $('repHead'), body = $('repBody');
+  try {
+    if (type === 'att') {
+      if (!m) { head.innerHTML = ''; body.innerHTML = '<tr><td class="muted">મહિનો પસંદ કરો.</td></tr>'; return; }
+      const d = await api(`/api/report?batch_id=${curBatch}&month=${m}`);
+      $('repNote').textContent = 'હાજરી = હાજર લેક્ચર ÷ કુલ લેક્ચર (લેક્ચર ૧ + લેક્ચર ૨). લાયબ્રેરી અલગ ગણાય છે.';
+      head.innerHTML = '<tr><th>Roll</th><th class="l">વિદ્યાર્થી</th><th class="l">કોલેજ</th><th>કુલ લેક્ચર</th><th>હાજર</th><th>ગેરહાજર</th><th>હાજરી %</th><th>લાયબ્રેરી દિવસ</th></tr>';
+      body.innerHTML = d.lectures_held ? d.rows.map(r => `<tr><td><b>${r.roll}</b></td><td class="l">${esc(r.name)}</td><td class="l sm">${esc(r.college)}</td>
+        <td>${r.held}</td><td style="color:var(--ok);font-weight:700">${r.present}</td><td style="color:var(--bad);font-weight:700">${r.absent}</td><td><b>${r.percent}%</b></td><td>${r.library_days}</td></tr>`).join('')
+        : `<tr><td colspan="8" class="muted">${esc(m)} માટે કોઈ લેક્ચર હાજરી ડેટા નથી.</td></tr>`;
+    } else {
+      const d = await api(`/api/tests/report?batch_id=${curBatch}` + (m ? '&month=' + m : ''));
+      $('repNote').textContent = 'AB = ગેરહાજર. ટકાવારી = હાજર રહેલા ટેસ્ટના કુલ ગુણ પરથી. સમાન ટકાવારીને સમાન Rank.';
+      if (!d.tests.length) { head.innerHTML = ''; body.innerHTML = '<tr><td class="muted">કોઈ ટેસ્ટ રેકોર્ડ નથી.</td></tr>'; return; }
+      head.innerHTML = '<tr><th>Rank</th><th>Roll</th><th class="l">વિદ્યાર્થી</th>' + d.tests.map(t => `<th>${esc(t.title)}<br><span class="sm">${esc(t.date)} (/${t.max_marks})${t.faculty ? '<br>' + esc(t.faculty) : ''}</span></th>`).join('') + '<th>કુલ ગુણ</th><th>ટકાવારી</th></tr>';
+      body.innerHTML = d.rows.map(r => `<tr><td><b>${r.rank ?? '-'}</b></td><td><b>${r.roll}</b></td><td class="l">${esc(r.name)}</td>` +
+        r.scores.map(v => v === null ? '<td><span class="b a">AB</span></td>' : `<td>${v}</td>`).join('') +
+        `<td>${r.appeared ? r.total_obtained + '/' + r.total_max : '-'}</td><td><b>${r.percent === null ? '-' : r.percent + '%'}</b></td></tr>`).join('');
+    }
+  } catch (e) { head.innerHTML = ''; body.innerHTML = `<tr><td class="muted">${esc(e.message)}</td></tr>`; }
+}
+$('btnRep').onclick = renderRep; $('repType').onchange = renderRep; $('repMonth').onchange = renderRep;
+$('btnRepAll').onclick = () => { $('repMonth').value = ''; renderRep(); };
+$('btnRepX').onclick = async () => {
+  const type = $('repType').value, m = $('repMonth').value;
+  if (type === 'att' && !m) return toast('મહિનો પસંદ કરો', true);
+  const path = type === 'att' ? `/api/export/report.xlsx?batch_id=${curBatch}&month=${m}` : `/api/export/tests.xlsx?batch_id=${curBatch}` + (m ? '&month=' + m : '');
+  try {
+    const res = await fetch(path, {headers: {'Authorization': 'Bearer ' + token}});
+    if (!res.ok) { let d = null; try { d = await res.json(); } catch (e) {} if (res.status === 401) logout(true); throw new Error((d && d.detail) || 'ડાઉનલોડ થઈ શક્યું નથી'); }
+    const b = batches.find(x => x.id === curBatch), a = document.createElement('a'); a.href = URL.createObjectURL(await res.blob());
+    a.download = (type === 'att' ? `attendance_${m}` : `test_results_${m || 'all'}`) + `_${(b ? b.name : curBatch).replace(/[^\w-]+/g, '_')}.xlsx`;
+    document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 8000);
+  } catch (e) { toast(e.message, true); }
+};
+setInterval(() => { if (user && !document.hidden && view === 'report') renderRep(); }, 30000);
+
+// ---------- STUDENTS (admin) ----------
+let studs = [], editSid = null;
+async function initStudents() { studs = await api(`/api/batches/${curBatch}/students`); renderStudents(); resetStudent(); }
+function renderStudents() {
+  const f = $('stFilter').value.trim().toLowerCase();
+  const list = studs.filter(s => !f || `${s.roll} ${s.name} ${s.college}`.toLowerCase().includes(f));
+  $('stCount').textContent = `(${studs.filter(s => s.active).length} ચાલુ / ${studs.length} કુલ)`;
+  $('stBody').innerHTML = list.map(s => `<tr class="${s.active ? '' : 'off'}"><td><b>${s.roll}</b></td><td class="l">${esc(s.name)}</td><td class="l sm">${esc(s.college)}</td>
+    <td class="l sm">${esc(s.mobile || '')}</td><td class="l sm">${esc([s.parent_name, s.parent_mobile].filter(Boolean).join(' · '))}</td>
+    <td>${s.active ? '<span class="b p">ચાલુ</span>' : '<span class="b a">બંધ</span>'}</td>
+    <td><button class="btn ghost sm" data-sid="${s.id}">ફેરફાર</button></td></tr>`).join('') || '<tr><td colspan="7" class="muted">કોઈ વિદ્યાર્થી નથી. નીચેથી ઉમેરો.</td></tr>';
+  $('stBody').querySelectorAll('button').forEach(b => b.onclick = () => editStudent(+b.dataset.sid));
+}
+$('stFilter').oninput = renderStudents;
+function resetStudent() {
+  editSid = null; ['stRoll', 'stName', 'stCollege', 'stMobile', 'stParent', 'stParentMobile'].forEach(i => $(i).value = '');
+  $('stActiveBox').hidden = true; $('stTitle').textContent = 'નવો વિદ્યાર્થી ઉમેરો';
+}
+function editStudent(id) {
+  const s = studs.find(x => x.id === id); editSid = id;
+  $('stRoll').value = s.roll; $('stName').value = s.name; $('stCollege').value = s.college || ''; $('stMobile').value = s.mobile || '';
+  $('stParent').value = s.parent_name || ''; $('stParentMobile').value = s.parent_mobile || '';
+  $('stActiveBox').hidden = false; $('stActive').value = s.active ? '1' : '0'; $('stTitle').textContent = `ફેરફાર: ${s.name}`;
+  $('stName').scrollIntoView({behavior: 'smooth', block: 'center'});
+}
+$('btnResetStudent').onclick = resetStudent;
+$('btnSaveStudent').onclick = async () => {
+  const f = {roll: $('stRoll').value ? +$('stRoll').value : null, name: $('stName').value.trim(), college: $('stCollege').value.trim(),
+    mobile: $('stMobile').value.trim(), parent_name: $('stParent').value.trim(), parent_mobile: $('stParentMobile').value.trim()};
+  if (!f.name) return toast('નામ લખો', true);
+  try {
+    if (editSid === null) { const r = await api('/api/students', {method: 'POST', body: JSON.stringify({batch_id: curBatch, ...f})}); toast(`વિદ્યાર્થી ઉમેરાયો (Roll ${r.roll})`); }
+    else { if (f.roll === null) delete f.roll; await api('/api/students/' + editSid, {method: 'PUT', body: JSON.stringify({...f, active: $('stActive').value === '1'})}); toast('ફેરફાર સેવ થયો'); }
+    await initStudents();
+  } catch (e) { toast(e.message, true); }
+};
+$('btnBulk').onclick = async () => {
+  const rows = $('bulkTxt').value.split(/\r?\n/).map(l => l.trim()).filter(Boolean).map(l => {
+    const p = l.split(/\t|,/).map(x => x.trim()); let roll = null;
+    if (/^\d+$/.test(p[0]) && p.length > 1) roll = +p.shift();
+    return {roll, name: p[0] || '', college: p[1] || '', mobile: p[2] || ''}; });
+  if (!rows.length) return toast('લાઇનો લખો', true);
+  try { const r = await api('/api/students/bulk', {method: 'POST', body: JSON.stringify({batch_id: curBatch, rows})});
+    toast(`${r.created} વિદ્યાર્થી ઉમેરાયા`); $('bulkTxt').value = ''; await initStudents();
+  } catch (e) { toast(e.message, true); }
+};
+
+// ---------- BATCHES (admin) ----------
+let editBid = null;
+async function initBatches() { renderBatches(); resetBatch(); }
+function renderBatches() {
+  $('bBody').innerHTML = batches.map(b => `<tr class="${b.active ? '' : 'off'}"><td class="l"><b>${esc(b.name)}</b></td><td class="l sm">${esc(b.description || '')}</td>
+    <td>${b.student_count}</td><td>${b.active ? '<span class="b p">ચાલુ</span>' : '<span class="b a">બંધ</span>'}</td>
+    <td><button class="btn ghost sm" data-bid="${b.id}">ફેરફાર</button> <button class="btn ghost sm" data-open="${b.id}">વિદ્યાર્થીઓ</button></td></tr>`).join('');
+  $('bBody').querySelectorAll('[data-bid]').forEach(b => b.onclick = () => editBatch(+b.dataset.bid));
+  $('bBody').querySelectorAll('[data-open]').forEach(b => b.onclick = () => { curBatch = +b.dataset.open; sessionStorage.setItem('batch', curBatch); go('students'); });
+}
+function resetBatch() { editBid = null; $('bName').value = ''; $('bDesc').value = ''; $('bActiveBox').hidden = true; $('bTitle').textContent = 'નવો બેચ બનાવો'; }
+function editBatch(id) {
+  const b = batches.find(x => x.id === id); editBid = id;
+  $('bName').value = b.name; $('bDesc').value = b.description || ''; $('bActiveBox').hidden = false; $('bActive').value = b.active ? '1' : '0';
+  $('bTitle').textContent = `ફેરફાર: ${b.name}`; $('bName').scrollIntoView({behavior: 'smooth', block: 'center'});
+}
+$('btnResetBatch').onclick = resetBatch;
+$('btnSaveBatch').onclick = async () => {
+  try {
+    const name = $('bName').value.trim(), description = $('bDesc').value.trim();
+    if (editBid === null) { const r = await api('/api/batches', {method: 'POST', body: JSON.stringify({name, description})}); curBatch = r.id; sessionStorage.setItem('batch', r.id); toast('બેચ બન્યો – હવે વિદ્યાર્થી ઉમેરો'); }
+    else { await api('/api/batches/' + editBid, {method: 'PUT', body: JSON.stringify({name, description, active: $('bActive').value === '1'})}); toast('ફેરફાર સેવ થયો'); }
+    await loadBatches(); initBatches();
+  } catch (e) { toast(e.message, true); }
+};
+
+// ---------- STAFF (admin) ----------
+let editId = null;
+async function initStaff() { usersCache = await api('/api/users'); renderStaff(); resetStaff(); }
+function renderStaff() {
+  const bn = ids => ids.map(i => (batches.find(b => b.id === i) || {}).name).filter(Boolean).join(', ');
+  $('sBody').innerHTML = usersCache.map(u => `<tr><td class="l">${esc(u.username)}</td><td class="l">${esc(u.name)}</td><td>${ROLE[u.role]}</td>
+    <td class="l">${esc(u.subject || '')}</td><td class="l sm">${u.role === 'admin' ? 'બધા' : esc(bn(u.batch_ids))}</td>
+    <td>${u.active ? '<span class="b p">ચાલુ</span>' : '<span class="b a">બંધ</span>'}</td>
+    <td><button class="btn ghost sm" data-id="${u.id}">ફેરફાર</button></td></tr>`).join('');
+  $('sBody').querySelectorAll('button').forEach(b => b.onclick = () => editStaff(+b.dataset.id));
+}
+function renderBatchChecks(sel) {
+  $('sBatches').innerHTML = batches.filter(b => b.active).map(b => `<label><input type="checkbox" value="${b.id}" ${sel.includes(b.id) ? 'checked' : ''}>${esc(b.name)}</label>`).join('')
+    || '<span class="muted">પહેલા "બેચ" ટેબમાં બેચ બનાવો.</span>';
+}
+function resetStaff() {
+  editId = null; ['sUser', 'sName', 'sSubject', 'sPass'].forEach(i => $(i).value = '');
+  $('sUser').disabled = false; $('sRole').disabled = false; $('sRole').value = 'faculty'; $('sActiveBox').hidden = true; $('sBatchBox').hidden = false;
+  $('sTitle').textContent = 'નવો સ્ટાફ ઉમેરો'; $('sPassLbl').textContent = 'Password';
+  const act = batches.filter(b => b.active); renderBatchChecks(act.length === 1 ? [act[0].id] : []);
+}
+function editStaff(id) {
+  const u = usersCache.find(x => x.id === id); editId = id;
+  $('sUser').value = u.username; $('sUser').disabled = true; $('sName').value = u.name; $('sSubject').value = u.subject || '';
+  $('sRole').value = u.role; $('sRole').disabled = u.role === 'admin'; $('sPass').value = '';
+  $('sActiveBox').hidden = u.role === 'admin'; $('sActive').value = u.active ? '1' : '0'; $('sBatchBox').hidden = u.role === 'admin';
+  renderBatchChecks(u.batch_ids);
+  $('sTitle').textContent = `ફેરફાર: ${u.name}`; $('sPassLbl').textContent = 'નવો Password (બદલવો હોય તો જ)';
+  $('sName').scrollIntoView({behavior: 'smooth', block: 'center'});
+}
+$('btnResetStaff').onclick = resetStaff;
+$('btnSaveStaff').onclick = async () => {
+  const batch_ids = [...$('sBatches').querySelectorAll('input:checked')].map(i => +i.value);
+  try {
+    if (editId === null) {
+      await api('/api/users', {method: 'POST', body: JSON.stringify({username: $('sUser').value.trim(), name: $('sName').value.trim(),
+        role: $('sRole').value, subject: $('sSubject').value.trim(), password: $('sPass').value, batch_ids})});
+      toast('સ્ટાફ ઉમેરાયો');
+    } else {
+      const u = usersCache.find(x => x.id === editId), body = {name: $('sName').value.trim(), subject: $('sSubject').value.trim()};
+      if (u.role !== 'admin') { body.role = $('sRole').value; body.active = $('sActive').value === '1'; body.batch_ids = batch_ids; }
+      if ($('sPass').value) body.password = $('sPass').value;
+      await api('/api/users/' + editId, {method: 'PUT', body: JSON.stringify(body)});
+      toast('ફેરફાર સેવ થયો');
+    }
+    await initStaff();
+  } catch (e) { toast(e.message, true); }
+};
+
+// ---------- ACCOUNT ----------
+async function initAccount() { $('accInfo').textContent = `${user.name} · ${ROLE[user.role]} · ${user.username}`; }
+$('btnPw').onclick = async () => {
+  try { await api('/api/me/password', {method: 'POST', body: JSON.stringify({old_password: $('pwOld').value, new_password: $('pwNew').value})});
+    $('pwOld').value = ''; $('pwNew').value = ''; toast('Password બદલાયો');
+  } catch (e) { toast(e.message, true); }
+};
+
+// ---------- install as app + startup ----------
+let installEvt = null;
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); installEvt = e; $('btnInstall').hidden = false; });
+$('btnInstall').onclick = async () => { if (!installEvt) return; installEvt.prompt(); await installEvt.userChoice; installEvt = null; $('btnInstall').hidden = true; };
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(() => {});
+
+(async () => {
+  await loadPublicBatches();
+  if (token) { try { user = await api('/api/me'); sessionStorage.setItem('usr', JSON.stringify(user)); } catch (e) { token = ''; user = null; } }
+  go('home');
+})();
+</script>
+</body>
+</html>
